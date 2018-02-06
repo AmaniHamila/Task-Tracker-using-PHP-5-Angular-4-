@@ -1,0 +1,76 @@
+<nav class="navbar navbar-toggleable-* navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">
+        <img src="assets/img/track.png" width="30" height="30" class="logo">
+      </a>
+      <span class="navbar-brand">Time Tracker App</span>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#page-top">
+        Tracker Time <span class="sr-only">(current)</span>
+      </a></li>
+      <li><a href="#AllTasks">All Tasks</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section  id="page-top">
+  <div class="container" style="height: 680px;">
+
+    <form #f="ngForm"  (ngSubmit)="onSubmit(f)" style=" margin-top:50px;">
+        <div class="form-group">
+          <label>Task Name</label>
+          <input type="text" class="form-control" name="task_name" ngModel required #first="ngModel">
+        </div>
+        <div class="form-group">
+          <label>Tracking Description</label>
+          <textarea rows="5" placeholder="Tracking description" class="form-control" name="tracking_description" ngModel></textarea>
+        </div>
+        <div class="form-group">
+            <input type="hidden" class="form-control" name="track_date" [(ngModel)]="myTime2">
+        </div>
+
+        <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <timepicker name="booked_time" [disabled]="isValid" [(ngModel)]="myTime"  [showMeridian]="ismeridian"
+                         [showMinutes]="showMin" [showSeconds]="showSec"></timepicker>
+            <span class="input-group-btn">
+            <button class="btn btn-default" [disabled]="isValid" type="submit">Book Time</button>
+            </span>
+
+          </div>
+        </div>
+       </div>
+
+
+
+    <br/>
+    <div class="row">
+    <div class="col-lg-6">
+    <div class="input-group">
+    <input type="text" class="form-control" [value]="show" name="finish_time" [(ngModel)]="show">
+      <span class="input-group-btn">
+      <button class="btn btn-primary" (click)="stopTime()" type="submit">Stop</button>
+      </span>
+    </div>
+    </div>
+    </div>
+    <br/>
+    <div class="btn-group">
+      <label class="btn btn-primary" (click)="startTime()"> Start </label>
+      <label class="btn btn-primary" (click)="pauseTime()"> Pause </label>
+  </div>
+
+      </form>
+  </div>
+</section>
+
+<section  id="AllTasks">
+  <div class="container" style="height: 680px;">
+
+  <ng2-smart-table [settings]="settings" [source]="source" style="margin-top:50px;" ></ng2-smart-table>
+
+  </div>
+</section>
