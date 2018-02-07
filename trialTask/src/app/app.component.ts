@@ -13,7 +13,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 
 export class AppComponent implements OnInit {
     taskTracking: any ;
-    myTime: string ;
+    myTime: Date = new Date();
     myTime2: Date = new Date();
     showMin = true;
     showSec = true;
