@@ -31,11 +31,13 @@ the service handles the communication with the PHP.
 
 
 
- ---- Please Note ----
+# ---- Please Note ----
+
+1- Run the two apps seperately
  
-Design a simple MySQL database and table.
+2- You should also design a simple MySQL database and table.
 
-
+db name: tasktrialdatabase |  table name : tracks
 
 
 | Field                | Type      | Null   | Key   | Default   | Extra          |
