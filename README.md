@@ -4,7 +4,7 @@ The frontend of the application is based on angular 4  and the backend is based 
 
 
 
-The PHP Application ( phpTrialTask folder ) has 3 files:  
+#The PHP Application ( phpTrialTask folder ) has 3 files:  
 
 index.php : a file that handles the requests (GET/POST) and based on that calls the database operations.
 
@@ -14,27 +14,20 @@ taskCrud.php : a taskCrud class that calls index.php to handle database operatio
  
  
  
- The Angular application ( trialTask folder ): 
+ #The Angular application ( trialTask folder ): 
  
-app.component.ts:
+##app.component.ts:
 
 it has the functions to start, pause or stop the tracker.
 it also has functions to call db-crud services.
 (PS: I used the ng2-smart-table component to displays information I get from the database. it already has interesting features like pagination and field-based filters).
 
-app.component.html : 
+##app.component.html : 
 
 A simple signle page with two sections, one to display the form and be able to either book a time or start/pause/stop the tracker and the other section to display all of the tasks/trackings.
 
-db-crud.service.ts: the service handles the communication with the PHP.
-
-
-
-
-
-
-
-
+##db-crud.service.ts:
+the service handles the communication with the PHP.
 
 
 
@@ -44,33 +37,21 @@ Design a simple MySQL database and table.
 
 
 
-+----------------------+-----------+------+-----+---------+----------------+.
 
-| Field                | Type      | Null | Key | Default | Extra          |.
-
-+----------------------+-----------+------+-----+---------+----------------+.
-
-| id                   | int(11)   | NO   | PRI | NULL    | auto_increment |.
-
-| task_name            | char(30)  | YES  |     | NULL    |                |.
-
-| tracking_description | char(200) | YES  |     | NULL    |                |.
-
-| track_date           | date      | YES  |     | NULL    |                |.
-
-| booked_time          | time      | YES  |     | NULL    |                |.
-
-| finish_time          | time      | YES  |     | NULL    |                |.
-
-+----------------------+-----------+------+-----+---------+----------------+.
+| Field                | Type      | Null   | Key   | Default   | Extra          |.
+| -------------------- |:---------:|:------:|:-----:|:---------:|--------------: |.
+| id                   | int(11)   | NO     | PRI   | NULL      | auto_increment |.
+| task_name            | char(30)  | YES    |       | NULL      |                |.
+| tracking_description | char(200) | YES    |       | NULL      |                |.
+| track_date           | date      | YES    |       | NULL      |                |.
+| booked_time          | time      | YES    |       | NULL      |                |.
+| finish_time          | time      | YES    |       | NULL      |                |.
 
 
 
 
 
-
-
-To be able to run the angular app.
+#To be able to run the angular app.
 
 1- Install and Setup Angular 4 
 
