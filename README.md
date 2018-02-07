@@ -1,14 +1,16 @@
 # Task-Tracker-using-PHP-5-Angular-4-
 
-The frontend of the application is based on angular 4  and the backend is based on PHP5 ( with REST API that can communicate with the Angular ) and MySQL as a database.
+The frontend of the application is based on angular 4  and the backend is based on PHP5 ( with REST API that can communicate with the Angular ).
+
+The used database is MySQL.
 
 
 
 # The PHP Application ( phpTrialTask folder ) has 3 files:  
 
-index.php : a file that handles the requests (GET/POST) and based on that calls the database operations.
+index.php : a file that handles the requests (GET/POST) and calls the database operations based on these requests.
 
-taskCrud.php : a taskCrud class that calls index.php to handle database operations.
+taskCrud.php : a taskCrud class that handles the database operations.
 
  .htaccess: a file to hide the PHP extention from the URL. 
  
@@ -18,8 +20,9 @@ taskCrud.php : a taskCrud class that calls index.php to handle database operatio
  
 ## app.component.ts:
 
-it has the functions to start, pause or stop the tracker.
+that has the functions to start, pause or stop the tracker.
 it also has functions to call db-crud services.
+
 (PS: I used the ng2-smart-table component to displays information I get from the database. it already has interesting features like pagination and field-based filters).
 
 ## app.component.html : 
