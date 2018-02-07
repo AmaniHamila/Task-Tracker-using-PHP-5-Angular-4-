@@ -43,7 +43,7 @@ db-crud.service.ts: the service handles the communication with the PHP.
 Design a simple MySQL database and table.
 
 
-
+![Alt text](https://github.com/AmaniHamila/Task-Tracker-using-PHP-5-Angular-4-/DescribeTracks.PNG "Optional Title")
 
 +----------------------+-----------+------+-----+---------+----------------+.
 
