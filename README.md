@@ -23,7 +23,7 @@ taskCrud.php : a taskCrud class that handles the database operations.
 that has the functions to start, pause or stop the tracker.
 it also has functions to call db-crud services.
 
-(PS: I used the ng2-smart-table component to displays information I get from the database. it already has interesting features like pagination and field-based filters).
+(PS: I used the ng2-smart-table component to display the information I get from the database. it already has interesting features like pagination and field-based filters).
 
 ## app.component.html : 
 
